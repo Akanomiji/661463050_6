@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="convertContent">
+            <h1>Money Exchange</h1>
+            <div class="group">
+                <input type="text" name="" id="amount">
+                <select name="" id="currency1">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="THB">THB</option>
+                </select>
+                <h3>to</h3>
+                <select name="" id="currency2">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="THB">THB</option>
+                </select>
+                <button onclick="convertMoney()">Convert</button>
+                <div id="result"></div>
+            </div>
+        </div>
+        <div class="convertContent">
+            <h1>Metric Length</h1>
+            <div class="group">
+                <input type="text" name="" id="amountLength">
+                <select name="" id="Length1">
+                    <option value="cm">cm</option>
+                    <option value="m">m</option>
+                    <option value="Km">Km</option>
+                </select>
+                <h3>to</h3>
+                <select name="" id="Length2">
+                    <option value="cm">cm</option>
+                    <option value="m">m</option>
+                    <option value="Km">Km</option>
+                </select>
+                <button onclick="metricLenghth()">Convert</button>
+                <div id="result1"></div>
+            </div>
+        </div>
+        <div class="convertContent">
+            <h1>Metric Area</h1>
+            <div class="group">
+                <input type="text" name="" id="amountArea">
+                <select name="" id="Area1">
+                    <option value="cm2">cm²</option>
+                    <option value="m2">m²</option>
+                    <option value="km2">km²</option>
+                </select>
+                <h3>to</h3>
+                <select name="" id="Area2">
+                    <option value="cm2">cm²</option>
+                    <option value="m2">m²</option>
+                    <option value="km2">km²</option>
+                </select>
+                <button onclick="metricArea()">Convert</button>
+                <div id="result2"></div>
+
+            </div>
+        </div>
+        <div class="convertContent">
+            <h1>Metric Volume</h1>
+            <div class="group">
+                <input type="text" name="" id="amountVolume">
+                <select name="" id="Volume1">
+                    <option value="cm3">cm³</option>
+                    <option value="m3">m³</option>
+                    <option value="L">L</option>
+                </select>
+                <h3>to</h3>
+                <select name="" id="Volume2">
+                    <option value="cm3">cm³</option>
+                    <option value="m3">m³</option>
+                    <option value="L">L</option>
+                </select>
+                <button onclick="metricVolume()">Convert</button>
+                <div id="result3"></div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/mainscript.js"></script>
+</body>
+
+</html>
