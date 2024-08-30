@@ -34,6 +34,11 @@ function metricLenghth() {
         Km: { cm: 100000, m: 1000, Km: 1}
         
     };
+
+    if (Length1 === Length2) {
+        document.getElementById("result1").innerText = "กรุณาเลือกหน่วยที่แตกต่างกัน";
+        return;
+    }
     const metricConvertLenghth = convertLength[Length1][Length2];
     const metricConvertAmount = (amountLength * metricConvertLenghth).toFixed(10);
 
@@ -49,6 +54,11 @@ function metricArea(){
         m2: {cm2:10000 ,m2: 1,km2: 0.000001},
         km2: {cm2: 10000000000,m2: 1000000,km2: 1}
     }
+
+    if (Area1 === Area2) {
+        document.getElementById("result2").innerText = "กรุณาเลือกหน่วยที่แตกต่างกัน";
+        return;
+    }
     const metricConvertArea = convertArea[Area1][Area2];
     const ConvertAreaAmount = (amountArea * metricConvertArea).toFixed(10);
     document.getElementById("result2").innerText = `${amountArea} ${Area1} = ${ConvertAreaAmount} ${Area2}`;
@@ -62,6 +72,11 @@ function metricVolume(){
         cm3: {cm3: 1,m3: 0.000001,L: 0.001},
         m3: {cm3: 1000000,m3: 1,L: 1000},
         L: {cm3: 1000,m3: 0.001,L: 1}
+    }
+
+    if (Volume1 === Volume2) {
+        document.getElementById("result3").innerText = "กรุณาเลือกหน่วยที่แตกต่างกัน";
+        return;
     }
     const metricConvertVolume = convertVolume[Volume1][Volume2];
     const ConvertVolumeAmount = (amountVolume * metricConvertVolume).toFixed(10);
