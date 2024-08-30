@@ -1,16 +1,21 @@
 function convertMoney() {
     const amount = parseFloat(document.getElementById("amount").value);
-    const Currency1 = document.getElementById("currency1").value;
-    const Currency2 = document.getElementById("currency2").value;
+    const Currency1 = document.getElementById("currency1").value.toUpperCase();
+    const Currency2 = document.getElementById("currency2").value.toUpperCase();
 
     
 
     const exchangeRates = {
         USD: { USD: 1, EUR: 0.90, THB: 34.02},
-        EUR: { USD: 1.10, EUR: 1, THB: 37.69},
-        THB: { USD: 0.029, EUR: 0.0265, THB: 1},
+        EUR: { USD: 1.111111111111111, EUR: 1, THB: 37.69},
+        THB: { USD: 0.029393, EUR: 0.0265322366675511, THB: 1},
         
     };
+
+    if (Currency1 === Currency2) {
+        document.getElementById("result").innerText = "กรุณาเลือกสกุลเงินที่แตกต่างกัน";
+        return;
+    }
 
     const conversionRate = exchangeRates[Currency1][Currency2];
     const convertedAmount = (amount * conversionRate).toFixed(2);
@@ -19,7 +24,7 @@ function convertMoney() {
 }
 
 function metricLenghth() {
-    const amountLength = parseInt(document.getElementById("amountLength").value);
+    const amountLength = parseFloat(document.getElementById("amountLength").value);
     const Length1 = document.getElementById("Length1").value;
     const Length2 = document.getElementById("Length2").value;
 
@@ -30,7 +35,7 @@ function metricLenghth() {
         
     };
     const metricConvertLenghth = convertLength[Length1][Length2];
-    const metricConvertAmount = (amountLength * metricConvertLenghth).toFixed(2);
+    const metricConvertAmount = (amountLength * metricConvertLenghth).toFixed(10);
 
     document.getElementById("result1").innerText = `${amountLength} ${Length1} = ${metricConvertAmount} ${Length2}`;
 }
